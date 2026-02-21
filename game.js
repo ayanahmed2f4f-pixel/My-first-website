@@ -10,8 +10,7 @@ const ctx = canvas.getContext("2d");
 const player = {
   x: 150,
   y: 200,
-  width: 30,
-  height: 30,
+  radius: 15,     // circle size
   velocityY: 0
 };
 
@@ -26,15 +25,16 @@ function update() {
   // Apply gravity
   player.velocityY += GRAVITY;
   player.y += player.velocityY;
-  
-  // Keep player on screen
-  if (player.y < 0) {
-    player.y = 0;
+
+  // Keep player on screen (TOP)
+  if (player.y - player.radius < 0) {
+    player.y = player.radius;
     player.velocityY = 0;
   }
 
-  if (player.y + player.height > canvas.height) {
-    player.y = canvas.height - player.height;
+  // Keep player on screen (BOTTOM)
+  if (player.y + player.radius > canvas.height) {
+    player.y = canvas.height - player.radius;
     player.velocityY = 0;
   }
 }
@@ -44,9 +44,12 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = "#66aaff";
-  ctx.fillRect(player.x, player.y, player.width, player.height);
-}
 
+  // Draw the player as a circle
+  ctx.beginPath();
+  ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
+  ctx.fill();
+}
 
 /* ---------- Game Loop ---------- */
 function loop() {
