@@ -1,3 +1,16 @@
+// 🧑‍💻 Problem: Grade Evaluator
+// 📌 Instructions for Students:
+// Create a program that:
+// Uses a for loop from 50 to 100 (increase by 10).
+// Uses a switch statement to determine the grade category.
+// Prints the score and its grade equivalent.
+// Score Range	Grade
+// 90–100	A
+// 80–89	B
+// 70–79	C
+// 60–69	D
+// Below 60	F
+
 const students = [{
   name: "marcus", 
   grade: 85,
@@ -12,8 +25,22 @@ const students = [{
   grade: 75,
 }];
 
-function evaluateGrade (){
-  console.log (students);
+function evaluateGrade() {
+  for (let i = 0; i < students.length; i++) {
+    let letter;
+
+    if (students[i].grade >= 90) {
+      letter = "A";
+    } else if (students[i].grade >= 80) {
+      letter = "B";
+    } else if (students[i].grade >= 70) {
+      letter = "C";
+    } else {
+      letter = "F";
+    }
+
+    console.log(students[i].name + " got a " + letter);
+  }
 }
 
-evaluateGrade ();
+evaluateGrade();
