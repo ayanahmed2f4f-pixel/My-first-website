@@ -52,7 +52,32 @@ function drawObstacles() {
     o.passed = true;
     score++;
     scoreElmt.textContent = score;
-  }
+    let gameState = "start"; // start | playing | gameover
+function isColliding(a, b) {
+  return (
+    a.x < b.x + b.width &&
+    a.x + a.width > b.x &&
+    a.y < b.y + b.height &&
+    a.y + a.height > b.y
+    const topPipe = {
+  x: o.x,
+  y: 0,
+  width: o.width,
+  height: o.topHeight
+};
+const bottomPipe = {
+  x: o.x,
+  y: o.topHeight + o.gap,
+  width: o.width,
+  height: canvas.height
+};
+if (
+  isColliding(player, topPipe) ||
+  isColliding(player, bottomPipe)
+) {
+  gameState = "gameover";
+}  );
+}  }
 });
  
 
