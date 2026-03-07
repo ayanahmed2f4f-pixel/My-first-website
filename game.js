@@ -35,8 +35,8 @@ function update() {
   // Keep player on screen (BOTTOM)
   if (player.y + player.radius > canvas.height) {
     player.y = canvas.height - player.radius;
-    player.velocityY = 0;
-  }
+    player.velocityY = 0;  }
+    updateObstacles()
 }
 
 /* ---------- Draw ---------- */
@@ -49,7 +49,7 @@ function draw() {
   ctx.beginPath();
   ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
   ctx.fill();
-  updateObstacles()
+  drawObstacles()
 }
 
 /* ---------- Game Loop ---------- */
