@@ -12,35 +12,53 @@
 // Below 60	F
 
 const students = [{
-  name: "marcus", 
-  grade: 85,
-}, { 
-  name: "liam", 
-  grade: 80,
+    name: "Marcus",
+    grade: 85
 }, {
-  name: "Ayan",
-  grade: 90,
+    name: "Liam",
+    grade: 80
 }, {
-  name: "Abdul",
-  grade: 75,
+    name: "Ayan",
+    grade: 90
+}, {
+    name: "Abdul",
+    grade: 75
 }];
 
-function evaluateGrade() {
-  for (let i = 0; i < students.length; i++) {
-    let letter;
 
-    if (students[i].grade >= 90) {
-      letter = "A";
-    } else if (students[i].grade >= 80) {
-      letter = "B";
-    } else if (students[i].grade >= 70) {
-      letter = "C";
-    } else {
-      letter = "F";
-    }
+function evaulateGrade() {
+    console.log(students);
+    for (let i = 0; i < students.length; i++) {
+    let letter;
+        switch(students[i].grade) {
+            case 90: {
+                letter = "A"
+                break;
+            }
+            case 80: {
+                letter = "B"
+                break;
+            }
+            case 70: {
+                letter = "C"
+                break;
+            }
+            default: letter = "F"
+        }
+
+    // if (students[i].grade >= 90) {
+    //   letter = "A";
+    // } else if (students[i].grade >= 80) {
+    //   letter = "B";
+    // } else if (students[i].grade >= 70) {
+    //   letter = "C";
+    // } else {
+    //   letter = "F";
+    // }
 
     console.log(students[i].name + " got a " + letter);
   }
+
 }
 
-evaluateGrade();
+evaulateGrade();
