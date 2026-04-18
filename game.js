@@ -74,7 +74,7 @@ function drawPlayer(ctx, x, y) {
   ctx.fillRect(x + 20, y + 5, 10, 5);
   ctx.fillStyle = 'black'; // Eye
   ctx.fillRect(x + 15, y + 5, 3, 3);
-  ctx.fillStyle = 'blue'; // Wing
+  ctx.fillStyle = 'yellow'; // Wing
   ctx.fillRect(x + 5, y - 5, 10, 10);
 }
 
