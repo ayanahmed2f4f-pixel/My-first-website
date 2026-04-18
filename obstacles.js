@@ -66,9 +66,9 @@ function drawObstacles() {
     // Top pipe
 
     ctx.fillRect(o.x, 0, o.width, o.topHeight);
-    ctx.fillStyle = 'green';
+    ctx.fillStyle = 'blue';
     ctx.fillRect(o.x - 5, 0, 60, o.topHeight); // Pipe body
-    ctx.fillStyle = 'darkgreen';
+    ctx.fillStyle = 'navy';
     ctx.fillRect(o.x - 10, o.topHeight - 20, 70, 20); // Cap
 
     // Bottom pipe
