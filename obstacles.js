@@ -74,9 +74,9 @@ function drawObstacles() {
     // Bottom pipe
     const bottomY = o.topHeight + o.gap;
     ctx.fillRect(o.x, bottomY, o.width, canvas.height - bottomY);
-    ctx.fillStyle = 'green';
+    ctx.fillStyle = 'blue';
     ctx.fillRect(o.x - 5, bottomY, 60, 450 - bottomY); // Pipe body
-    ctx.fillStyle = 'darkgreen';
+    ctx.fillStyle = 'navy';
     ctx.fillRect(o.x - 10, bottomY, 70, 20); // Cap
 
   });
