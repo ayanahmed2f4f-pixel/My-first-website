@@ -68,13 +68,13 @@ function draw() {
 function drawPlayer(ctx, x, y) {
 
   // Draw pixel bird (simple 8x8 sprite, scaled up)
-  ctx.fillStyle = 'yellow'; // Body
+  ctx.fillStyle = 'red'; // Body
   ctx.fillRect(x, y, 20, 20);
-  ctx.fillStyle = 'orange'; // Beak
+  ctx.fillStyle = 'yellow'; // Beak
   ctx.fillRect(x + 20, y + 5, 10, 5);
   ctx.fillStyle = 'black'; // Eye
   ctx.fillRect(x + 15, y + 5, 3, 3);
-  ctx.fillStyle = 'red'; // Wing
+  ctx.fillStyle = 'blue'; // Wing
   ctx.fillRect(x + 5, y - 5, 10, 10);
 }
 
