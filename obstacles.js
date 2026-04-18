@@ -12,7 +12,7 @@ let isInvisible = false;
 function init() {
   spawnTimer = 0;
   spawnRate = 150;
-  scrollSpeed = 2;
+  scrollSpeed = 5;
   gap = 200; // space between top and bottom pipes
   score = 0;
   newScore = 0;
