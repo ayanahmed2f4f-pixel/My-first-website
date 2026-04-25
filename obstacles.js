@@ -37,8 +37,7 @@ function spawnObstacle() {
       width: 40,
       height: 40,
       collected: false
-      let coinSize = 40;
-    });
+  });
   }
 }
 
