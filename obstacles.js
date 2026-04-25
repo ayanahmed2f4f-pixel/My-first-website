@@ -1,7 +1,7 @@
 let obstacles = [];
 let spawnTimer = 0;
-let spawnRate = 80;
-let scrollSpeed = 7;
+let spawnRate = 100;
+let scrollSpeed = 5;
 let gap = 200; // space between top and bottom pipes
 let score = 0;
 let newScore = 0;
@@ -11,8 +11,8 @@ let isInvisible = false;
 
 function init() {
   spawnTimer = 0;
-  spawnRate = 80;
-  scrollSpeed = 7;
+  spawnRate = 100;
+  scrollSpeed = 5;
   gap = 200; // space between top and bottom pipes
   score = 0;
   newScore = 0;
