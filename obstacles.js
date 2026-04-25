@@ -30,7 +30,7 @@ function spawnObstacle() {
   });
   // 50% chance to spawn a coin in the gap
   if (Math.random() < 0.5) {
-    const coinY = topHeight + gap / 2 - (coinSize / 2); // Center in gap, coin size 40
+    const coinY = topHeight + gap / 2 - 10; // Center in gap, coin size 40
     coins.push({
       x: canvas.width + 30, // Slightly ahead of pipe
       y: coinY,
